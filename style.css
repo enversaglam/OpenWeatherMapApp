@@ -1,0 +1,110 @@
+body {
+    background: #56ab2f;
+    background: linear-gradient(to top, #56ab2f, #a8e063);
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 90%;
+    max-width: 480px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .25);
+}
+
+.switch {
+    width: 130px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    background: lightgray;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+}
+
+.slider span,
+.slider::before,
+.slider::after {
+    display: block;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: inherit;
+    text-align: center;
+    line-height: 22px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.slider::after {
+    content: 'Imperial';
+    transform: translate(100%);
+}
+
+.slider::before {
+    content: '';
+    background: #fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    transform: translate(0);
+}
+
+.switch input:checked+.slider {
+    background: dodgerblue;
+    color: #fff;
+}
+
+.switch input:checked+.slider::before {
+    left: 50%;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 2px solid #bbb;
+    border-radius: 10px;
+    height: 42px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.search-form input {
+    height: 100%;
+    font-size: 1.25rem;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+}
