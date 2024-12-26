@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+
+* {
+    font-family: 'Jost', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: #56ab2f;
     background: linear-gradient(to top, #56ab2f, #a8e063);
@@ -100,6 +109,10 @@ switch input {
     margin-bottom: 1rem;
 }
 
+.search-form span {
+    margin: 10px;
+}
+
 .search-form input {
     height: 100%;
     font-size: 1.25rem;
@@ -107,4 +120,106 @@ switch input {
     border: none;
     outline: none;
     padding: 0 5px;
+}
+
+.search-form input::-webkit-input-placeholder {
+    color: #bbb;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+}
+
+.grid-item:first-child {
+    grid-column: span 2;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, .25);
+}
+
+.grid-item.day-time {
+    background: #56ccf2;
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+}
+
+.grid-item.night-time {
+    background: #243b55;
+    background: linear-gradient(135deg, #243b55, #141e30);
+}
+
+.grid-item:nth-child(n+2) {
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grid-item h5 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #56ab2f;
+}
+
+.grid-item p {
+    font-size: 2rem;
+}
+
+.location {
+    flex-basis: 100%;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.weather-data {
+    flex-basis: 60%;
+}
+
+.weather-image {
+    flex-basis: 40%;
+}
+
+.weather-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.temp {
+    font-size: 4rem;
+}
+
+.unit {
+    font-size: 2rem;
+}
+
+.desc {
+    font-size: 1.25rem;
+}
+
+.desc + div {
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+}
+
+.desc + div strong:last-of-type {
+    margin-left: auto;
+}
+
+.desc + div strong {
+    margin-right: 0.5rem;
+    color: #a8e063;
 }
