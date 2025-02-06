@@ -6,7 +6,6 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
-    <script src="script.js"></script>
 </head>
 <body>
     <main class="container">
@@ -22,24 +21,24 @@
         <form class="search-form">
             <span class="material-symbols-outlined">
                 search
-                </span>
+            </span>
             <input type="text" id="search" placeholder="Enter city, state or country name" required />
         </form>
-
+        
         <section class="grid">
             <div class="grid-item day-time">
                 
                 <h2 class="location">Location</h2>
-
+                
                 <!-- weather data -->
                 <div class="weather-data">
                     <div>
                         <span class="temp">99.99</span>
                         <span class="unit">°C</span>
                     </div>
-
+                    
                     <div class="desc">Description</div>
-
+                    
                     <div>
                         <strong>H:</strong>
                         <span class="max">99.99 </span>
@@ -47,10 +46,10 @@
                         <span class="min">99.99</span>
                     </div>
                 </div>
-
+                
                 <!-- weather icon -->
-                 <img src="./img/01d.png" alt="weather icon" class="weather-image">
-
+                <img src="./img/01d.png" alt="weather icon" class="weather-image">
+                
             </div>
             <div class="grid-item">
                 <h5>Feels Like</h5>
@@ -70,5 +69,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

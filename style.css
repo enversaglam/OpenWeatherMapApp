@@ -206,6 +206,7 @@ switch input {
 
 .desc {
     font-size: 1.25rem;
+    text-transform: capitalize;
 }
 
 .desc + div {
