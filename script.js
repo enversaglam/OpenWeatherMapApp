@@ -103,3 +103,33 @@ function displayWeatherData(data, isImperial) {
     content.mainGrid.classList.toggle('night-time', !isDayTime);
 
 }
+
+function getCurrentPosition() {
+    return new Promise((resolve) => {
+        //if geolocation is not enabled, set Tokyo as default location
+        const latitude = 35.689487;
+        const longitude = 139.691706;
+
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => resolve(position.coords),
+                () => resolve({ latitude, longitude })
+            );
+        }else {
+            resolve({ latitude, longitude });
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    /* const isImperial = document.getElementById('unitType').checked === false;
+    const unitType = isImperial ? 'imperial' : 'metric'; */
+    
+    try {
+        const { latitude, longitude } = await getCurrentPosition();
+        const data = await getWeatherByPosition(latitude, longitude, 'metric');
+        displayWeatherData(data, false);
+    } catch (error) {
+        console.error('Error on fetching data on page load', error);
+    }
+});

@@ -8,4 +8,4 @@ A Simple weather app using the OpenWeatherMap API.
 - [x] Switch between Metric and Imperial units.
 - [x] Dynamic day/night background.
 - [x] Custom weather icons.
-- [ ] Geolocation for current weather.
+- [x] Geolocation for current weather.
